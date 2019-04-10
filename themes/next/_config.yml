@@ -218,9 +218,9 @@ social_icons:
 links_icon: link
 links_title: Links
 links_layout: block
-#links_layout: inline
+# links_layout: inline
 links:
-  弓长木南: https://gmcnqaq.github.io/
+  弓木长南——莫慢待，放宽心: https://gmcnqaq.github.io/
 
 # Sidebar Avatar
 avatar:
@@ -383,7 +383,7 @@ related_posts:
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
 post_edit:
   enable: false
-  url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source.
+  #url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source.
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit.
 
 
