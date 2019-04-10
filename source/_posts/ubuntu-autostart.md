@@ -1,7 +1,7 @@
 ---
 title: Ubuntu 命令行和GUI程序开机自启动配置
 date: 2019-04-08 21:23:36
-tags: ubuntu
+tags: [ubuntu,linux]
 ---
 
 ## 命令行自启动：rc.local
