@@ -1,7 +1,7 @@
 ---
-title: 公式流|线性回归分析期中复习
+title: "[公式流]线性回归分析期中复习"
 date: 2019-04-18 21:36:26
-tags: {线性回归分析}
+tags: ["线性回归分析"]
 ---
 
 # Simple Linear Regression
