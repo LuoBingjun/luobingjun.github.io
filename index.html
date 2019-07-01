@@ -10,6 +10,10 @@
 
 <style>
     /* 全局 */
+    a {
+        text-decoration: none;
+    }
+
     body {
         font-family: sans-serif;
         display: flex;
@@ -20,6 +24,7 @@
         color: rgb(200, 200, 200);
         text-align: center;
         padding: 5px;
+        margin:5px;
     }
 
     nav {
@@ -41,13 +46,26 @@
         border-radius: 10px;
     }
 
+    #div_logo {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     article {
-        background-color: rgba(192, 192, 192, 0.4);
+        background-color: rgba(192, 192, 192, 0.2);
         color: rgb(200, 200, 200);
         border-radius: 10px;
-        padding: 5px;
+        padding: 10px 20px 15px 20px;
         margin-top: 10px;
         margin-bottom: 10px;
+        transition: 0.5s;
+    }
+
+    a>article:hover {
+        background-color: rgba(245, 245, 213, 0.2);
+        transition: 0.5s;
     }
 
     footer {
@@ -57,13 +75,14 @@
         clear: both;
         text-align: center;
         padding: 5px;
+        margin:5px;
     }
 
     /* 移动端 */
-    @media screen and (max-width:720px) {
+    @media screen and (max-width:960px) {
         html::before {
-            background: url(./images/bg_m.jpg) no-repeat;
-            background-size: cover;
+            background: url(./images/bg_m.jpg);
+            background-size: 100%;
             width: 100%;
             height: 100%;
             content: "";
@@ -71,7 +90,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            filter: blur(3px);
+            filter: blur(1px);
         }
 
         nav>a {
@@ -82,25 +101,41 @@
             display: flex;
             flex-direction: column;
             padding: 10px;
+            flex: 1 0 480px;
         }
 
         aside {
-            flex: 0 1 30px;
+            flex: 1 0 100px;
+            background-color: rgba(192, 192, 192, 0.2);
+            color: rgb(200, 200, 200);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
         }
 
-        #category {
-            flex: 0 0 600px;
+        #logo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
         }
     }
 
     /* PC端 */
-    @media screen and (min-width:720px) {
+    @media screen and (min-width:960px) {
         h1 {
             font-size: 32px;
         }
 
         h2 {
-            font-size: 24px;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
         }
 
         p {
@@ -108,8 +143,8 @@
         }
 
         html::before {
-            background: url(./images/bg_m.jpg) no-repeat;
-            background-size: cover;
+            background: url(./images/bg.jpg);
+            background-size: 100%;
             width: 100%;
             height: 100%;
             content: "";
@@ -117,21 +152,38 @@
             top: 0;
             left: 0;
             z-index: -1;
-            filter: blur(3px);
+            filter: blur(1px);
         }
 
         nav>a {
             flex: 0 0 100px;
         }
 
+        aside {
+            background-color: rgba(192, 192, 192, 0.2);
+            color: rgb(200, 200, 200);
+            flex: 0 0 320px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        #logo {
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
         main {
             display: flex;
             flex-direction: row;
             padding: 10px;
-        }
-
-        aside {
-            flex: 0 1 240px;
+            flex: 1 0 480px;
         }
 
         #category {
@@ -155,34 +207,40 @@
 
     <main>
         <aside>
-            <h2>骆炳君</h2>
-            <p>
-                清华大学软件工程专业本科生
-            </p>
-            <p>社交网络</p>
-            <!-- <p>E-mail: luobingjun@gmail.com</p>
-            <p>知乎：@骆炳君</p>
-            <p>B站：@你好学渣君</p>
-            <p>steam： @Kayano32</p> -->
+            <div id="div_logo">
+                <img src="./images/logo.jpg" id="logo">
+            </div>
+            <div>
+                <h2>
+                    骆炳君
+                </h2>
+                <h3>
+                    清华大学软件软件本科生<br>
+                </h3>
+                <p>
+                    E-mail:<a href="mailto:luobingjun@gmail.com">luobingjun@gmail.com</a><br>
+                    知乎：@骆炳君<br>
+                    Steam： @Kayano32<br>
+                </p>
+            </div>
         </aside>
         <div id="category">
-            <article>
-                <a href="index.html">
+            <a href="index.html">
+                <article>
                     <h2>我与Web前端小学期</h2>
                     <p>
                         期末考试结束的第一天，想他。
                     </p>
-                </a>
-            </article>
-            <article>
-                <a href="index.html">
+                </article>
+            </a>
+            <a href="index.html">
+                <article>
                     <h2>我与Web前端小学期</h2>
                     <p>
                         期末考试结束的第一天，想他。
                     </p>
-                </a>
-            </article>
-
+                </article>
+            </a>
         </div>
     </main>
 
@@ -190,11 +248,5 @@
         Copyright @骆炳君
     </footer>
 </body>
-
-<style>
-    a {
-        text-decoration: none;
-    }
-</style>
 
 </html>
