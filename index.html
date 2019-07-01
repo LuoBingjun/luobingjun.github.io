@@ -8,194 +8,7 @@
 </head>
 
 
-<style>
-    /* 全局 */
-    a {
-        text-decoration: none;
-    }
-
-    body {
-        font-family: sans-serif;
-        display: flex;
-        display: -webkit-flex;
-        flex-direction: column;
-    }
-
-    header {
-        color: rgb(200, 200, 200);
-        text-align: center;
-        padding: 5px;
-        margin:5px;
-    }
-
-    nav {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        display: flex;
-        display: -webkit-flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    nav>a {
-        color: rgb(200, 200, 200);
-        transition: 0.5s;
-    }
-
-    nav>a:hover {
-        transition: 0.5s;
-        background-color: rgba(192, 192, 192, 0.3);
-        border-radius: 10px;
-    }
-
-    #div_logo {
-        display: flex;
-        display: -webkit-flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    article {
-        background-color: rgba(192, 192, 192, 0.2);
-        color: rgb(200, 200, 200);
-        border-radius: 10px;
-        padding: 10px 20px 15px 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        transition: 0.5s;
-    }
-
-    a>article:hover {
-        background-color: rgba(245, 245, 213, 0.2);
-        transition: 0.5s;
-    }
-
-    footer {
-        background-color: rgb(255, 255, 255, 0.2);
-        color: rgb(200, 200, 200);
-        border-radius: 10px;
-        clear: both;
-        text-align: center;
-        padding: 5px;
-        margin:5px;
-    }
-
-    /* 移动端 */
-    @media screen and (max-width:960px) {
-        html::before {
-            background: url(./images/bg_m.jpg);
-            background-size: 100%;
-            width: 100%;
-            height: 100%;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            filter: blur(1px);
-        }
-
-        nav>a {
-            flex: 1 1 100px;
-        }
-
-        main {
-            display: flex;
-            display: -webkit-flex;
-            flex-direction: column;
-            padding: 10px;
-            flex: 1 0 480px;
-        }
-
-        aside {
-            flex: 1 0 100px;
-            background-color: rgba(192, 192, 192, 0.2);
-            color: rgb(200, 200, 200);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        #logo {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-        }
-    }
-
-    /* PC端 */
-    @media screen and (min-width:960px) {
-        h1 {
-            font-size: 32px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        h3 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        html::before {
-            background: url(./images/bg.jpg);
-            background-size: 100%;
-            width: 100%;
-            height: 100%;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            filter: blur(1px);
-        }
-
-        nav>a {
-            flex: 0 0 100px;
-        }
-
-        aside {
-            background-color: rgba(192, 192, 192, 0.2);
-            color: rgb(200, 200, 200);
-            flex: 0 0 320px;
-            display: flex;
-            display: -webkit-flex;
-            flex-direction: column;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-right: 10px;
-        }
-
-        #logo {
-            margin: 0 auto;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        main {
-            display: flex;
-            display: -webkit-flex;
-            flex-direction: row;
-            padding: 10px;
-            flex: 1 0 480px;
-        }
-
-        #category {
-            flex: 1 0 320px;
-        }
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="./style.css">
 
 <body>
     <header>
@@ -215,17 +28,24 @@
             <div id="div_logo">
                 <img src="./images/logo.jpg" id="logo">
             </div>
-            <div>
+            <div id="div_intro">
                 <h2>
                     骆炳君
                 </h2>
                 <h3>
-                    清华大学软件软件本科生<br>
+                    五道口体校本科生<br>
                 </h3>
                 <p>
-                    E-mail:<a href="mailto:luobingjun@gmail.com">luobingjun@gmail.com</a><br>
-                    知乎：@骆炳君<br>
-                    Steam： @Kayano32<br>
+                    E-mail:
+                    <a href="mailto:luobingjun@gmail.com"> @luobingjun
+                    </a><br>
+                    GitHub:
+                    <a href="https://github.com/LuoBingjun"> @LuoBingjun
+                    </a><br>
+                    知乎:
+                    <a href="https://www.zhihu.com/people/luo-bing-jun-63/"> @骆炳君
+                    </a><br>
+                    Steam: @Kayano32
                 </p>
             </div>
         </aside>
