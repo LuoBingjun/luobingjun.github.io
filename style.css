@@ -90,7 +90,7 @@
         }
 
         aside {
-            flex: 0 0 px;
+            flex: 0 0 150px;
             background-color: rgba(192, 192, 192, 0.2);
             color: rgb(200, 200, 200);
             border-radius: 10px;
