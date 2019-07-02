@@ -99,7 +99,7 @@
         }
 
         #div_logo {
-            max-width:200px;
+            max-width:150px;
             width: 30%;
             margin-right: 20px;
 
@@ -153,13 +153,13 @@
             display: -webkit-flex;
             flex-direction: row;
             padding: 10px;
-            flex: 1 0 480px;
+            flex: 1;
         }
 
         aside {
             background-color: rgba(192, 192, 192, 0.2);
             color: rgb(200, 200, 200);
-            flex: 0 0 20%;
+            flex: 0 0 240px;
             display: flex;
             display: -webkit-flex;
             flex-direction: column;
