@@ -9,6 +9,20 @@
 
 
 <link rel="stylesheet" type="text/css" href="../style.css">
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/noErrors.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [['$', '$'], ["\\(", "\\)"]],
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],
+            balanceBraces: true
+
+        },
+        TeX: { equationNumbers: { autoNumber: ["AMS"], useLabelIds: true } },
+        "HTML-CSS": { availableFonts: ["TeX"] },
+    });
+</script>
 
 <body>
     <header>
