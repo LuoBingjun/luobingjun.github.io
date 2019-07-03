@@ -84,7 +84,6 @@
         }
 
         aside {
-            /* height:240px; */
             flex: 1 0 200px;
             background-color: rgba(192, 192, 192, 0.2);
             color: rgb(200, 200, 200);
@@ -118,6 +117,10 @@
         #category {
             flex: 1 0 320px;
         }
+
+        #contents{
+            display:none;
+        }
     }
 
     /* PC端 */
@@ -142,6 +145,8 @@
             background: url(./images/bg.jpg);
             background-size: 100%;
             background-attachment: fixed;
+            max-width:1024px;
+            margin:auto;
         }
 
         nav>a {
@@ -159,7 +164,7 @@
         aside {
             background-color: rgba(192, 192, 192, 0.2);
             color: rgb(200, 200, 200);
-            flex: 0 0 240px;
+            flex: 0 0 200px;
             display: flex;
             display: -webkit-flex;
             flex-direction: column;

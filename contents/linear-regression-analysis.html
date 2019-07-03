@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<head>
+    <meta charset="UTF-8">
+    <title>[公式流]线性回归分析期中复习 | 骆炳君的个人主页</title>
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="../style.css">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js", "TeX/noErrors.js", "TeX/AMSsymbols.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [['$', '$'], ["\\(", "\\)"]],
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],
+            balanceBraces: true
+
+        },
+        TeX: { equationNumbers: { autoNumber: ["AMS"], useLabelIds: true } },
+        "HTML-CSS": { availableFonts: ["TeX"] },
+    });
+</script>
+
+<body>
+    <header>
+        <h1>个人主页</h1>
+        <nav>
+            <a href="../index.html">
+                <h3>首页</h3>
+            </a>
+            <a href="../about.html">
+                <h3>关于我</h3>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <aside id="contents">
+            <div id="div_logo">
+                <img src="../images/logo.jpg" id="logo">
+            </div>
+            <div id="div_intro">
+                <h2>
+                    骆炳君
+                </h2>
+                <h3>
+                    五道口体校本科生<br>
+                </h3>
+                <p>
+                    E-mail:
+                    <a href="mailto:luobingjun@gmail.com"> @luobingjun
+                    </a><br>
+                    GitHub:
+                    <a href="https://github.com/LuoBingjun"> @LuoBingjun
+                    </a><br>
+                    知乎:
+                    <a href="https://www.zhihu.com/people/luo-bing-jun-63/"> @骆炳君
+                    </a><br>
+                    Steam: @Kayano32
+                </p>
+            </div>
+        </aside>
+        <div id="category">
+            <article>
+                <h1>[公式流]线性回归分析期中复习</h1>
+                <h2>Model</h2>
+                <p>$Y_i=\beta_0+\beta_1X_i+\epsilon_i$</p>
+                <h2>Hypothesis</h2>
+                <ul>
+                    <li>$\epsilon_i$ is independent</li>
+                    <li>$E\epsilon_i=0,\ Var(\epsilon_i)=\sigma^2$</li>
+
+                </ul>
+                <p>With normal error:</p>
+                <ul>
+                    <li>$\epsilon_i\ i.i.d.\sim N(0,\sigma^2)$</li>
+
+                </ul>
+                <h2>Parameter Estimate</h2>
+                <h3>method</h3>
+                <ul>
+                    <li>OLS
+                        $$\hat{\beta_0},\hat{\beta_1}=argmin_{\beta_0,\beta_1}\sum
+                        e_i=argmin_{\beta_0,\beta_1}\sum(Y_i-\beta_0-\beta_1X_i)^2$$</li>
+                    <li>MLE</li>
+
+                </ul>
+                <h3>conclusion</h3>
+                <p>$$\hat{\beta_1}=\frac{\sum(X_i-\bar{X})(Y_i-\bar{Y})}{\sum(X_i-\bar{X})^2}$$</p>
+                <p>$$\hat{\beta_0}=\bar{Y}-\hat{\beta_1}\bar{X}$$</p>
+                <p>$$\hat{\sigma^2}=MSE=\frac{SSE}{n-2}=\frac{\sum(\hat{Y_i}-Y_i)^2}{n-2}$$</p>
+                <p>$$E(s^2)=E(MSE)=\sigma^2$$</p>
+                <h2>Inference on b_1(\hat{\beta_1})</h2>
+                <p>$$b_1=\frac{\sum(X_i-\bar{X})(Y_i-\bar{Y})}{\sum(X_i-\bar{X})^2}=\frac{\sum(X_i-\bar{X})(\beta_0+\beta_1X_i+\epsilon_i)}{\sum(X_i-\bar{X})^2}=\beta_1+\frac{\sum(X_i-\bar{X})\epsilon_i}{\sum(X_i-\bar{X})^2}$$
+                </p>
+                <p>$$Eb_1=\beta_1,\ Var(b_1)=\frac{\sigma^2}{\sum(X_i-\bar{X})^2}$$</p>
+                <p>$$b_1\sim N(\beta_1,\frac{\sigma^2}{\sum(X_i-\bar{X})^2})$$</p>
+                <h3>Test $H_0:b_1=0$</h3>
+                <p>$$T=\frac{b_1}{\sqrt{\frac{\hat{\sigma^2}}{\sum(X_i-\bar{X})^2}}}\sim t_{n-2}|H_0$$</p>
+                <p>$$F=\frac{MSR}{MSE}\sim F_{1;n-2}$$</p>
+                <p>$$F=T^2$$</p>
+                <h2>Prediction about Y</h2>
+                <h3>$E(Y_h) (\mu_h)$</h3>
+                <p>$$\mu_h=E(Y_h)=\beta_0+\beta_1X_h$$</p>
+                <h4>Estimation</h4>
+                <p>$$\hat{\mu_h}=b_0+b_1X_h$$</p>
+                <p>$$E(\hat{\mu_h})=\mu_h,\
+                    \sigma^2(\mu_h)=\sigma^2(\frac{1}{n}+\frac{(X_h-\bar{X})^2}{\sum(X_i-\bar{X})^2})$$</p>
+                <p>$$\hat{\mu_h}\sim N(\mu_h, \sigma^2(\mu_h))$$</p>
+                <h4>Inference (Test &amp; CI)</h4>
+                <p>$$s^2(\mu_h)=s^2(\frac{1}{n}+\frac{(X_h-\bar{X})^2}{\sum(X_i-\bar{X})^2})$$</p>
+                <p>$$\frac{\hat{\mu_h}-\mu_h}{s(\hat{\mu_h})}\sim t_{n-2}$$</p>
+                <h3>$Y_{h(new)}$</h3>
+                <p>$$Y_{h(new)}=\beta_0+\beta_1X_h+\epsilon\sim N(\beta_0+\beta_1X_h,\sigma^2)$$</p>
+                <h4>Estimation</h4>
+                <p>$$\hat{Y}_{h(new)}=b_0+b_1X_h+\epsilon=\hat{\mu}_h+\epsilon$$</p>
+                <p>$$E(\hat{Y}_{h(new)})=\mu_h,\
+                    \sigma^2(\hat{Y}_{h(new)})=Var(\hat{\mu}_h)+Var(\epsilon)=\sigma^2(1+\frac{1}{n}+\frac{(X_h-\bar{X})^2}{\sum(X_i-\bar{X})^2})$$
+                </p>
+                <h4>Inference (Test &amp; CI)</h4>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        Copyright @骆炳君
+    </footer>
+</body>
+
+</html>
