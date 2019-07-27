@@ -20,11 +20,15 @@ $ npm install https --save
 $ npm install ws --save
 ```
 
-## 部署服务器
+## 配置服务器
 
-首先使用https模块搭建HTTPS服务器监听：
+首先使用https模块搭建HTTPS服务器监听，其中options中包括了SSL协议所需要的证书信息，app是处理一般HTTPS请求的函数：
 
 ```javascript
+var options = {
+  key: fs.readFileSync(keypath),
+  cert: fs.readFileSync(certpath)
+}
 var httpsServer = https.createServer(options, app).listen(port)
 ```
 
@@ -35,3 +39,13 @@ var wssServer = new ws.Server({ server: this.httpsServer })
 ```
 
 这样就搭建好了wss服务器。
+
+## 部署监听
+
+wss服务器在监听到建立连接的请求时，会触发connection事件，并传入该连接所对应的WebSocket，可以通过绑定该事件来监听
+
+```javascript
+wssServer.on('connection', wssHandler)
+```
+
+至此，我们就完成了wss服务器搭建的基本过程，通过填充wssHandler函数就可以和普通WebSocket一样操作新建的WebSocket连接了。
