@@ -38,7 +38,7 @@
     }
 
     article {
-        background-color: rgba(192, 192, 192, 0.2);
+        background-color: rgba(192, 192, 192, 0.3);
         color: rgb(200, 200, 200);
         border-radius: 10px;
         padding: 10px 20px 15px 20px;
@@ -48,13 +48,13 @@
     }
 
     a>article:hover {
-        background-color: rgba(245, 245, 213, 0.2);
+        background-color: rgba(245, 245, 213, 0.3);
         transition: 0.5s;
     }
 
     footer {
         flex: 1 0 10px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.3);
         color: rgb(200, 200, 200);
         border-radius: 10px;
         clear: both;
@@ -85,7 +85,7 @@
 
         aside {
             flex: 1 0 200px;
-            background-color: rgba(192, 192, 192, 0.2);
+            background-color: rgba(192, 192, 192, 0.3);
             color: rgb(200, 200, 200);
             border-radius: 10px;
             display: flex;
@@ -162,7 +162,7 @@
         }
 
         aside {
-            background-color: rgba(192, 192, 192, 0.2);
+            background-color: rgba(192, 192, 192, 0.3);
             color: rgb(200, 200, 200);
             flex: 0 0 200px;
             display: flex;
